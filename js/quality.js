@@ -30,6 +30,7 @@
         schemaCallback([tableSchema]);
     };
 
+    // Download the data from gpp.cms.gov site
     myConnector.getData = function(table, doneCallback) {
         $.getJSON("https://qpp.cms.gov/api/v1/ia", function(resp) {
             var feat = resp.serviceData.improvement_activities,
